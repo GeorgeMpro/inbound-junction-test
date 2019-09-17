@@ -1,0 +1,121 @@
+@import "~src/variables";
+@import "~src/mixins";
+
+$bottom-media-query: 59rem;
+:host {
+  color: $text-color-white;
+}
+
+#footer {
+  background: #623bbb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+
+  padding-top: 5.125rem;
+  padding-bottom: 6.25rem;
+
+  @include media-min-width($bottom-media-query) {
+    padding-bottom: 0;
+  }
+}
+
+// body
+.footer-header {
+  font-size: 1.5rem;
+  padding-bottom: 0.3125rem;
+  font-weight: bold;
+  @include media-min-width($bottom-media-query) {
+    font-size: 3rem;
+  }
+}
+
+.footer-subheader {
+  font-size: 1.25rem;
+  padding-bottom: 1.5rem;
+  @include media-min-width($bottom-media-query) {
+    font-size: 2rem;
+  }
+}
+
+.footer-content {
+  max-width: 20rem;
+  margin: 0 auto 2.5rem;
+  @include media-min-width($bottom-media-query) {
+    font-size: 1.125rem;
+    max-width: 56rem;
+  }
+}
+
+// bullets
+.number-bullets {
+  margin: 0 auto 6.25rem;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 33.8rem;
+  min-width: 243px;
+
+  .bullet-background {
+    $bullet-size: 2.3125rem;
+    height: $bullet-size;
+    width: $bullet-size;
+    color: $background-blue;
+    background: $text-color-white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+
+    @include media-min-width($bottom-media-query) {
+      $bullet-size-large: 4rem;
+      height: $bullet-size-large;
+      width: $bullet-size-large;
+    }
+
+    span {
+      margin: auto;
+      @include media-min-width($bottom-media-query) {
+        font-size: 2rem;
+      }
+    }
+
+    &:hover, &:active {
+      color: $text-color-white;
+      background: $background-blue;
+    }
+  }
+}
+
+// copyright
+.copyright {
+  font-size: 0.875rem;
+  @include media-min-width($bottom-media-query) {
+    background: black;
+    padding-top: 5.625rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.footer-expand {
+  display: none;
+  @include media-min-width($bottom-media-query){
+  display: flex;
+
+  }
+  padding-top: 2.5rem;
+  background: black;
+  justify-content: center;
+
+  .footer-column {
+    margin: 0 2rem;
+
+    .footer-column__heading {
+      font-size: 1.25rem;
+    }
+
+    .footer-column__content {
+      margin-top: 0.8rem;
+    }
+  }
+}

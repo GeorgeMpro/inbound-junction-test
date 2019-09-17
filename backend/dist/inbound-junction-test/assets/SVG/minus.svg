@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>minus</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="32" cy="32" r="32"></circle>
+        <filter x="-10.9%" y="-7.8%" width="121.9%" height="121.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="minus" transform="translate(4.000000, 2.000000)" fill-rule="nonzero">
+            <g id="Oval-2">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#00A9FF" xlink:href="#path-1"></use>
+            </g>
+            <path d="M45.7387758,31.7106912 C45.7387758,32.6554799 44.9108376,33.4213824 43.8895241,33.4213824 L19.8492517,33.4213824 C18.8279382,33.4213824 18,32.6554799 18,31.7106912 C18,30.7659025 18.8279382,30 19.8492517,30 L43.8895241,30 C44.9108376,30 45.7387758,30.7659025 45.7387758,31.7106912 Z" id="Rectangle-4" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

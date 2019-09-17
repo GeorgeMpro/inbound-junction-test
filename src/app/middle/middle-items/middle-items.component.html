@@ -1,0 +1,25 @@
+<div *ngIf="isMobileDisplay ||currentDisplay<1200 ">
+    <div class="middle__sub-heading">{{subHeading}}</div>
+    <!--middle items-->
+    <div class="middle__items">
+        <div class="middle__item" *ngFor="let item of middleItemsSmall">
+            {{item}}
+            <span></span>
+        </div>
+        <div class="middle__item">
+            {{middleContentSmall}}
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!isMobileDisplay && currentDisplay> 1200">
+    <div class="middle__sub-heading">{{subHeading}}</div>
+    <div class="wide-screen">
+        <div class="wide-items" *ngFor="let item of middleItemsLarge">
+            <span></span>
+            <div class="middle-text">{{item}}</div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,32 @@
+<div class="footer-container" id="footer">
+
+    <!--body-->
+    <div class="footer-header">{{footerHeading}}</div>
+    <div class="footer-subheader">{{footerSubHeading}}</div>
+    <div class="footer-content">{{footerContent}}</div>
+
+    <!--bullets-->
+    <div class="bullets-container">
+        <div class="number-bullets">
+            <div class="bullet-background"
+                 *ngFor="let number of numberBullet">
+                <span>{{number}}</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--expandable-->
+    <div class="footer-expand">
+        <div class="footer-column" *ngFor="let col of footerExpandableItems">
+            <div class="footer-column__heading">{{col}}</div>
+            <div class="footer-column__content"
+                 *ngFor="let content of footerExpandableItems">
+                {{content}}
+            </div>
+        </div>
+    </div>
+
+    <!--copyright-->
+    <div class="copyright">{{copyrightText}}</div>
+</div>

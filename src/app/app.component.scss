@@ -1,0 +1,45 @@
+@import "~src/variables";
+@import "~src/mixins";
+
+:host {
+  height: 100%;
+}
+
+.main {
+  $path: '../assets/PNG/';
+  $left-top-image: $path+"ATF 1 left.png";
+  $right-top-image: $path+"ATF 1 right.png";
+  $right-middle-mobile-image: $path+"mobile element right-cropped.png";
+  $left-middle-mobile-image: $path+"mobile element left-cropped.png";
+  $right-middle-image: $path+"ATF 2 right.png";
+  $left-middle-image: $path+"ATF 2 left.png";
+  $left-bottom-image: $path+"Bottom element left.png";
+  $right-bottom-image: $path+"Bottom element right.png";
+
+  $main-background-color: linear-gradient(175deg, #3023ae, #c86dd7);
+
+  background: url($left-top-image) top right no-repeat,
+  url($right-top-image) top left no-repeat,
+  url($left-middle-mobile-image) left top 41% no-repeat,
+  url($right-middle-mobile-image) right top 17% no-repeat,
+  url($left-bottom-image) right bottom 19% no-repeat,
+  url($right-bottom-image) left bottom 19% no-repeat,
+  $main-background-color;
+  background-size: 43%, 52%, 110%, 101%, 50%, 40%;
+
+  @include media-min-width($max-mobile-width) {
+    background: url($left-top-image) top right no-repeat,
+    url($right-top-image) top left no-repeat,
+    url($left-middle-image) right top 21% no-repeat,
+    url($right-middle-image) left top 26% no-repeat,
+    url($left-bottom-image) right bottom 19% no-repeat,
+    url($right-bottom-image) left bottom 17% no-repeat,
+    $main-background-color;
+    background-size: 37%, 50%, 52%, 49%, 35%, 57%;
+  }
+
+  .main-container {
+    height: 100%;
+  }
+}
+

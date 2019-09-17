@@ -1,0 +1,45 @@
+<div class="bottom-container" id="bottom">
+
+    <div class="bottom-heading">{{bottomHeading}}</div>
+
+    <!--    combined mobile-->
+    <div class="combined-container"
+         *ngFor="let combined of combinedContentSmall; index as i"
+         [ngClass]="{'third-combined':i===2, 'fourth-combined':i===3}">
+        <div class="combined-sign">
+            <img src="../../assets/SVG/plus.svg" alt="">
+        </div>
+
+        <div>
+            <div class="text-background">
+                <div class="combined-text">{{combined}}</div>
+            </div>
+            <div class="combined-second" *ngIf="i===2">
+                {{combinedSecondText}}
+            </div>
+        </div>
+    </div>
+
+    <!--combine large-->
+    <div class="large-display__container">
+        <div class="large"
+             *ngFor="let large of combinedContentLarge; index as i"
+             [ngClass]="{'third-large':i===2, 'fourth-large':i===3}"
+        >
+            <div [ngClass]="{'third-large':i===2}">
+                <div class="large-container"
+                     [ngClass]="{'first':i===0,'second':i===1,'third-large__container':i===2,'fourth':i===3}">
+                    <div class="sign-large">
+                        <img *ngIf="i!=2" src="../../assets/SVG/plus.svg" alt="">
+                        <img *ngIf="i==2" src="../../assets/SVG/minus.svg" alt="">
+                    </div>
+
+                    <div class="combined-text__large">{{large}}</div>
+                </div>
+                <div class="combined-third__large" *ngIf="i===2">
+                    <span>{{combinedSecondText}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

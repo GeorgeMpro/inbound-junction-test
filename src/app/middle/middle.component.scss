@@ -1,0 +1,35 @@
+@import "~src/variables";
+@import "~src/mixins";
+
+
+.middle-container {
+  padding-top: 12rem;
+  padding-bottom: 9.9375rem;
+
+  .middle-items__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media-min-width($middle-width-change-flex) {
+      background: none;
+      flex-direction: row;
+    }
+  }
+
+  .question-image {
+    margin: 3rem auto;
+    @include media-min-width($max-mobile-width) {
+      display: flex;
+      justify-content: center;
+      margin: 1rem;
+    }
+  }
+}
+
+#second-column {
+  @include media-min-width($middle-width-change-flex) {
+    margin-top: 5.3rem;
+  }
+}

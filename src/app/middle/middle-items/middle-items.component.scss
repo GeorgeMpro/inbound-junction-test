@@ -1,0 +1,63 @@
+@import "~src/variables";
+@import "~src/mixins";
+
+.middle__sub-heading {
+  margin: 0 auto 2.3125rem;
+  max-width: 15rem;
+  font-size: 1.5rem;
+  color: #00a9ff;
+  @include media-min-width($middle-width-change-flex) {
+    font-size: 2rem;
+    max-width: 20rem;
+    margin: 0 0 3.25rem;
+  }
+}
+
+.middle__items {
+  .middle__item {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 16.125rem;
+    overflow: hidden;
+    font-size: 1.125rem;
+    color: #464646;
+  }
+
+  span {
+    margin: 0.75rem auto;
+    display: block;
+    height: $bullet-size-small;
+    width: $bullet-size-small;
+    background: $background-blue;
+    border-radius: 50%;
+  }
+}
+
+.wide-screen {
+  .wide-items {
+    display: flex;
+    border-bottom: 1px $background-blue solid;
+    padding-bottom: 1.25rem;
+    margin: 1rem 0;
+
+    &:nth-child(5) {
+      border: none;
+    }
+  }
+
+  span {
+    display: inline-block;
+    margin-right: 1.5rem;
+    min-height: $bullet-size-small;
+    min-width: $bullet-size-small;
+    max-height: $bullet-size-small;
+    max-width: $bullet-size-small;
+    background: $background-blue;
+    border-radius: 50%;
+  }
+
+  .middle-text {
+    font-size: 1.5rem;
+    max-width: 28rem;
+  }
+}
