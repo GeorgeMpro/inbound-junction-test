@@ -1,6 +1,6 @@
 const app = require('./app');
 
-const port = process.env.PORT | 3000;
+const port = process.env.PORT;
 
 // Start the app by listening on the default Heroku port
 // app.listen(port);
